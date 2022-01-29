@@ -1,3 +1,9 @@
+/**
+ * @file index.js est le logiciel serveur local.
+ * @author VirtuoWorks
+ */
+
+
 import express from 'express'
 import path from 'path'
 import {fileURLToPath} from 'url'
