@@ -29,8 +29,14 @@ app.get('/', (req, res) => {
 });
 
 app.post('/comment', (req, res) => {
-  const comment = req.body.message;
-  res.send(comment);
+  const comment = String(req.body.message);
+  // eslint-disable-next-line prefer-regex-literals
+  const isScript = new RegExp(/.*<script>.+<\/script>.*/gi);
+  if (comment.match(isScript)) {
+    res.send('Bien tenté!!');
+  } else {
+    res.send(comment);
+  }
 });
 
 app.listen(port, host, () => {
