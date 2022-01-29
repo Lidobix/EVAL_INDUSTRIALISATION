@@ -17,7 +17,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(dirname, 'public')));
-app.use('/favicon.ico', express.static(path.join(dirname, 'public', 'images', 'favicon.png')));
+app.use(
+  '/favicon.ico',
+  express.static(path.join(dirname, 'public', 'images', 'favicon.png')),
+);
 
 app.get('/', (req, res) => {
   res.sendFile('index.html', { root: path.join(dirname) }, (err) => {
@@ -30,4 +33,6 @@ app.post('/comment', (req, res) => {
   res.send(comment);
 });
 
-app.listen(port, host, () => { console.info(`Server started @ http://${host}:${port}.`); });
+app.listen(port, host, () => {
+  console.info(`Server started @ http://${host}:${port}.`);
+});

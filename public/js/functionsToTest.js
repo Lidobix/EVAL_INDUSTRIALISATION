@@ -17,8 +17,11 @@ const returnAnObject = (...args) => {
 const multiplyAllByTwo = (arrayOfNumbers) => {
   let response;
   // eslint-disable-next-line no-array-constructor
-  if (arrayOfNumbers.constructor.prototype === new Array().constructor.prototype) {
-    response = arrayOfNumbers.map(((val) => val * 2));
+  if (
+    // eslint-disable-next-line no-array-constructor
+    arrayOfNumbers.constructor.prototype === new Array().constructor.prototype
+  ) {
+    response = arrayOfNumbers.map((val) => val * 2);
     // eslint-disable-next-line no-undef
     console.log('arrayTimesTwo: ', arrayTimesTwo);
   } else {
