@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const returnAnObject = (...args) => {
+export const returnAnObject = (...args) => {
   let response = {};
   if (args.length) {
     let index = 0;
@@ -14,7 +14,7 @@ const returnAnObject = (...args) => {
 };
 
 // eslint-disable-next-line no-unused-vars
-const multiplyAllByTwo = (arrayOfNumbers) => {
+export const multiplyAllByTwo = (arrayOfNumbers) => {
   let response;
   // eslint-disable-next-line no-array-constructor
   if (
@@ -23,7 +23,7 @@ const multiplyAllByTwo = (arrayOfNumbers) => {
   ) {
     response = arrayOfNumbers.map((val) => val * 2);
     // eslint-disable-next-line no-undef
-    console.log('arrayTimesTwo: ', arrayTimesTwo);
+    console.log('arrayTimesTwo: ', response);
   } else {
     response = 'The argument is not an Array of numbers';
   }

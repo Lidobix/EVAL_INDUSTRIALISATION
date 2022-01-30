@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-cycle */
 /**
  * @file main.js est le logiciel serveur local.
  * @author VirtuoWorks
@@ -55,5 +57,5 @@ window.addEventListener('DOMContentLoaded', () => {
   (function startAll() {
     invoquePokemon();
     pokemonAbility();
-  })();
+  }());
 });
