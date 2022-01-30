@@ -11,6 +11,9 @@
     },
     "rules": {
         "linebreak-style": ["error", "windows"],
-        "no-console":"off"
-    }
+        "no-console":"off",
+        "import/extensions": [ <severity>, {
+            <extension>:  "always"
+          }]    
+    }    
 }
